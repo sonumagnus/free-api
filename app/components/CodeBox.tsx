@@ -39,7 +39,6 @@ export default function CodeBox({
             backgroundColor: "transparent",
             padding: "24px",
             fontFamily: source_code_pro.className,
-            fontSize: "18px",
             lineHeight: "1.6",
           }}
           children={children}

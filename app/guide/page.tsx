@@ -22,13 +22,13 @@ export default function Guide() {
   }
 
   return (
-    <div className="max-w-7xl m-auto px-6 flex gap-12 mt-20">
-      <div className="w-1/5">
+    <div className="max-w-7xl m-auto px-6 flex flex-col lg:flex-row gap-12 mt-6 lg:mt-20">
+      <div className="lg:w-1/5 flex lg:flex-col overflow-x-auto">
         {sideList.map((tab, index) => (
           <div
-          key={tab.title}
-          onClick={() => clickHandler(index)}
-            className={`flex py-3 px-4 cursor-pointer ${
+            key={tab.title}
+            onClick={() => clickHandler(index)}
+            className={`flex py-3 px-4 cursor-pointer whitespace-nowrap ${
               activeIndex === index ? "bg-green-50 rounded-lg" : null
             }`}
           >
@@ -37,14 +37,12 @@ export default function Guide() {
           </div>
         ))}
       </div>
-      <div className="w-3/4">
-        <div>
-          <ExampleBox
-            cssState={cssState}
-            /* @ts-ignore */
-            fetchcode={fetchExmaple[sideList[activeIndex].active]}
-          ></ExampleBox>
-        </div>
+      <div className="lg:w-3/4">
+        <ExampleBox
+          cssState={cssState}
+          /* @ts-ignore */
+          fetchcode={fetchExmaple[sideList[activeIndex].active]}
+        ></ExampleBox>
       </div>
     </div>
   );

@@ -40,7 +40,7 @@ export default function Apitable() {
                     <BsFileEarmarkPostFill /> Posts
                   </td>
                   <td>https://myjasonapi.com/api/posts</td>
-                  <td>https://myjasonapi.com/api/posts/1</td>
+                  <td>https://myjasonapi.com/api/post/1</td>
                   <td>https://myjasonapi.com/api/posts?page=2</td>
                 </tr>
                 <tr
@@ -55,9 +55,9 @@ export default function Apitable() {
                   <td className="flex items-center gap-4">
                     <ImUsers /> Users
                   </td>
-                  <td>https://myjasonapi.com/api/posts</td>
-                  <td>https://myjasonapi.com/api/posts/1</td>
-                  <td>https://myjasonapi.com/api/posts?page=2</td>
+                  <td>https://myjasonapi.com/api/users</td>
+                  <td>https://myjasonapi.com/api/user/1</td>
+                  <td>https://myjasonapi.com/api/users?page=2</td>
                 </tr>
                 <tr
                   className="
@@ -71,9 +71,9 @@ export default function Apitable() {
                   <td className="flex items-center gap-4">
                     <FaComments /> Comments
                   </td>
-                  <td>https://myjasonapi.com/api/posts</td>
-                  <td>https://myjasonapi.com/api/posts/1</td>
-                  <td>https://myjasonapi.com/api/posts?page=2</td>
+                  <td>https://myjasonapi.com/api/comments</td>
+                  <td>https://myjasonapi.com/api/comment/1</td>
+                  <td>https://myjasonapi.com/api/comments?page=2</td>
                 </tr>
               </tbody>
             </table>

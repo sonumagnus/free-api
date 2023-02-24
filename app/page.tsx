@@ -10,7 +10,10 @@ export default function Home() {
     <>
       <div className="max-w-7xl px-6 m-auto  pt-7 lg:pt-28 pb-14 lg:pb-28 ">
         <div className="flex flex-col lg:flex-row relative gap-14">
-          <span className="absolute -top-20 -left-28 pointer-events-none opacity-20 bg-gradient-to-r from-lime-300 via-lime-400 rounded-full to-green-400 h-[100vw] w-[100vw] blur-[20vw] md:h-[40vw] md:w-[40vw] md:blur-[8vw] lg:h-[40vh] lg:w-[40vh] lg:right-[-10vw] lg:blur-[10vh] z-[1]"></span>
+          <span
+            className="absolute -top-20 -left-28 pointer-events-none opacity-20 bg-gradient-to-r from-lime-300 via-lime-400 rounded-full
+          to-green-400 h-[100vw] w-[100vw] blur-[20vw] md:h-[40vw] md:w-[40vw] md:blur-[8vw] lg:h-[40vh] lg:w-[40vh] lg:right-[-10vw] lg:blur-[10vh] z-[1]"
+          ></span>
           <div className="space-y-10 relative z-[2] w-full lg:w-3/5">
             <h1 className=" text-4xl lg:text-6xl font-semibold leading-[48px] lg:leading-[68px] tracking-wide">
               Fast and Free<span className="text-green-500 "> Dummy APIs </span>

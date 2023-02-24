@@ -13,13 +13,13 @@ export default function ExampleBox({
       <div className="h-12 border-b flex items-center pl-6">
         <p className="text-lg font-medium">App.js</p>
       </div>
-      <div className="grid grid-cols-2">
-        <div className=" max-h-[30rem] overflow-auto">
+      <div className="grid lg:grid-cols-2">
+        <div className=" max-h-[30rem] overflow-auto text-sm lg:text-lg">
           <CodeBox cssState={cssState} threeDot={false}>
             {fetchcode}
           </CodeBox>
         </div>
-        <div className="max-h-[30rem] overflow-auto bg-slate-50 border-l">
+        <div className="max-h-[30rem] overflow-auto bg-slate-50 border-l text-sm lg:text-lg">
           <CodeBox cssState={cssState} threeDot={false} showLineNumbers={true}>
             {apiResponse}
           </CodeBox>

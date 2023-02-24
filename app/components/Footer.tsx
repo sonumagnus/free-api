@@ -21,7 +21,7 @@ export default function Footer() {
               priority
             />
           </div>
-          <p className="my-7 max-w-xl">
+          <p className="my-7 text-sm lg:text-base max-w-xl">
             Access Ligtening Fast Fake APIs for Testing Your Projects Locally
             During Development Phase
           </p>

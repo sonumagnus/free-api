@@ -61,6 +61,7 @@ const apiResponse = `[
       name: "Deckow-Crist",
     },
   },
+  ...
 ]`;
 
 export { fetchCode, apiResponse, fetchExmaple };
