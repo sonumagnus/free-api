@@ -1,23 +1,36 @@
-const fetchCode = `fetch("https://api.github.com/users")
+const sampleCode = `fetch("https://myjsonapi.vercel.app/api/users")
 .then((response) => response.json())
 .then((result) => console.log(result))`;
 
-const fetchExmaple = {
-  fetch: `fetch("https://api.github.com/users")
+const fetchSampleCodes = {
+  fetch: `fetch("https://myjsonapi.vercel.app/api/users")
 .then((response) => response.json())
 .then((result) => console.log(result))`,
 
-  axios: `axios.get("https://api.github.com/users")
+  axios: `axios.get("https://myjsonapi.vercel.app/api/users")
 .then((response) => response.json())
 .then((result) => console.log(result))`,
 
-  vue: `useFetch("https://api.github.com/users")
+  vue: `useFetch("https://myjsonapi.vercel.app/api/users")
 .then((response) => response.json())
 .then((result) => console.log(result))`,
 
-  node: `node("https://api.github.com/users")
+  node: `fetch("https://myjsonapi.vercel.app/api/users")
 .then((response) => response.json())
 .then((result) => console.log(result))`,
+
+  nextjs: `async function getData() {
+  const res = await fetch('https://api.example.com/...');
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  return res.json();
+}
+
+export default async function Page() {
+  const data = await getData();
+  return <main></main>;
+}`,
 };
 
 const apiResponse = `[
@@ -64,4 +77,4 @@ const apiResponse = `[
   ...
 ]`;
 
-export { fetchCode, apiResponse, fetchExmaple };
+export { sampleCode, apiResponse, fetchSampleCodes };

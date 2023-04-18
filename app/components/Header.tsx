@@ -19,16 +19,19 @@ export default function Header() {
           />
         </Link>
       </div>
-      <ul className="hidden lg:flex gap-14 font-medium text-sm uppercase text-zinc-600 w-1/2 justify-center">
+      {/* <ul className="hidden lg:flex gap-14 font-medium text-sm uppercase text-zinc-600 w-1/2 justify-center">
         {navs.map((nav) => (
           <li key={nav.name}>
             <Link href={nav.path}>{nav.name}</Link>
           </li>
         ))}
-      </ul>
-      <div className="flex lg:w-1/4 justify-end">
+      </ul> */}
+      <a
+        href="https://github.com/sonumagnus/free-api"
+        className="flex lg:w-1/4 justify-end"
+      >
         <AiFillGithub size={25} />
-      </div>
+      </a>
     </div>
   );
 }

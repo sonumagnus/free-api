@@ -7,16 +7,20 @@ import { RiVuejsLine } from "react-icons/ri";
 import { CodeBox } from ".";
 import Link from "next/link";
 import { GoChevronRight } from "react-icons/go";
-import { apiResponse } from "@/api-example-code";
+import { apiResponse, fetchSampleCodes } from "@/api-sample-code";
 
 const iconSize = 45;
 export default function HomeExample() {
   const [exampleIndex, setExampleIndex] = useState(0);
 
   const languageList = [
-    { name: "nodejs", icon: <FaNodeJs size={iconSize} /> },
-    { name: "vuejs", icon: <RiVuejsLine size={iconSize} /> },
-    { name: "nextjs", icon: <TbBrandNextjs size={iconSize} /> },
+    { name: "nodejs", icon: <FaNodeJs size={iconSize} />, active: "node" },
+    { name: "vuejs", icon: <RiVuejsLine size={iconSize} />, active: "vue" },
+    {
+      name: "nextjs",
+      icon: <TbBrandNextjs size={iconSize} />,
+      active: "nextjs",
+    },
   ];
   return (
     <div>
@@ -28,7 +32,7 @@ export default function HomeExample() {
             and frameworks
           </p>
           <Link
-            href="#"
+            href="/guide"
             className="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-green-50 text-green-600 hover:bg-green-100 hover:text-green-700 focus:ring-green-600 mb-12"
           >
             All Examples <GoChevronRight className="text-green-400 ml-1" />
@@ -65,7 +69,7 @@ export default function HomeExample() {
             <div className="lg:w-1/2 h-fit lg:-mt-28 relative z-[3] border rounded-lg shadow-lg overflow-auto max-h-80">
               <CodeBox>
                 {/* @ts-ignore */}
-                {exmapleTemplates[languageList[exampleIndex].name]}
+                {fetchSampleCodes[languageList[exampleIndex].active]}
               </CodeBox>
             </div>
           </div>
@@ -74,12 +78,3 @@ export default function HomeExample() {
     </div>
   );
 }
-
-const exmapleTemplates = {
-  nodejs: `fetch("https://api.github.com/users")
-.then((response) => response.json())
-.then((result) => console.log(result))`,
-
-  vuejs: `usefetch("https://api.github.com/users")`,
-  nextjs: `getStaticpro("https://api.github")`,
-};

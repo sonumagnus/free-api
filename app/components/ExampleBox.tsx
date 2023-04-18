@@ -1,5 +1,5 @@
 import { CodeBox } from ".";
-import { apiResponse } from "@/api-example-code";
+import { apiResponse } from "@/api-sample-code";
 
 export default function ExampleBox({
   fetchcode,

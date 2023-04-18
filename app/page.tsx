@@ -4,6 +4,7 @@ import { FaComments } from "react-icons/fa";
 import { BsFileEarmarkPostFill } from "react-icons/bs";
 import Link from "next/link";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { sampleCode } from "@/api-sample-code";
 
 export default function Home() {
   return (
@@ -24,20 +25,23 @@ export default function Home() {
               During Development Phase
             </h2>
             <div className="py-7 flex items-center gap-7">
-              <button className="bg-green-500 px-5 py-2 text-white font-semibold rounded-lg text-xl hover:bg-green-600">
-                API Guide
-              </button>
               <Link
-                href={"https://www.github.com/sonumagnus"}
+                href="/guide"
+                className="bg-green-500 px-5 py-2 text-white font-semibold rounded-lg text-xl hover:bg-green-600"
+              >
+                API Guide
+              </Link>
+              <a
+                href={"https://github.com/sonumagnus/free-api"}
                 className="flex items-center gap-2 font-medium"
               >
                 Open on Github <HiOutlineArrowLongRight size={22} />
-              </Link>
+              </a>
             </div>
           </div>
           <div className=" w-full lg:w-2/5">
             <div className="border rounded-lg overflow-hidden shadow-lg">
-              <CodeBox>{testCode}</CodeBox>
+              <CodeBox>{sampleCode}</CodeBox>
             </div>
           </div>
         </div>
@@ -77,10 +81,6 @@ function ApiResources() {
   );
 }
 
-const testCode = `fetch("https://api.github.com/users")
-.then((response) => response.json())
-.then((result) => console.log(result))`;
-
 const iconStyling = {
   size: 24,
   color: "green",
@@ -89,7 +89,7 @@ const iconStyling = {
 const Resources = [
   {
     name: "Posts",
-    api: "http://localhost:3000/api/posts",
+    api: "https://myjsonapi.vercel.app/api/posts",
     icon: (
       <BsFileEarmarkPostFill
         size={iconStyling.size}
@@ -99,12 +99,12 @@ const Resources = [
   },
   {
     name: "Users",
-    api: "http://localhost:3000/api/users",
+    api: "https://myjsonapi.vercel.app/api/users",
     icon: <ImUsers size={iconStyling.size} color={iconStyling.color} />,
   },
   {
     name: "Comments",
-    api: "http://localhost:3000/api/comments",
+    api: "https://myjsonapi.vercel.app/api/comments",
     icon: <FaComments size={iconStyling.size} color={iconStyling.color} />,
   },
 ];

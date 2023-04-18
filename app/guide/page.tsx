@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { fetchExmaple } from "@/api-example-code";
+import { fetchSampleCodes } from "@/api-sample-code";
 
 import { SiFarfetch } from "react-icons/si";
 import { FaVuejs } from "react-icons/fa";
@@ -41,7 +41,7 @@ export default function Guide() {
         <ExampleBox
           cssState={cssState}
           /* @ts-ignore */
-          fetchcode={fetchExmaple[sideList[activeIndex].active]}
+          fetchcode={fetchSampleCodes[sideList[activeIndex].active]}
         ></ExampleBox>
       </div>
     </div>
